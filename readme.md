@@ -1,3 +1,4 @@
+```
 -- Gets the latest node image base for node
 FROM          node:alpine
 -- This is pair value to specify the author
@@ -33,3 +34,5 @@ docker login
 
 -- push image to dockerhub
 docker push monikapaza/nodeapi:monica.apaza
+
+```
