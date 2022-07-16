@@ -17,13 +17,19 @@ EXPOSE        $PORT
 -- Run node command pointing to the index javascript file
 ENTRYPOINT    [ "node" , "api/index.js"]
 
--- Command that builds the image "nodeapihw2" using the code in the current Directory with Dockerfile as default template
-docker build -t nodeapihw2 .
+-- Command that builds the image "monikapaza/nodeapi:monica.apaza" using the code in the current Directory with Dockerfile as default template
+docker build -t monikapaza/nodeapi:monica.apaza .
 -- To verify the image type the following command
 docker images
 
--- Create the container in detached mode using the image "nodeapihw2" assigning the same port, the name of the container is "homework2"
- docker run -d -p 3000:3000 --name homework2 nodeapihw2
+-- Create the container in detached mode using the image "monikapaza/nodeapi:monica.apaza" assigning the same port, the name of the container is "homework2"
+ docker run -d -p 3000:3000 --name homework2 monikapaza/nodeapi:monica.apaza
 
 -- To verify use 
 docker ps -a
+
+-- login to dockerhub
+docker login
+
+-- push image to dockerhub
+docker push monikapaza/nodeapi:monica.apaza
