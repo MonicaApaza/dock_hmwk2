@@ -35,4 +35,7 @@ docker login
 -- push image to dockerhub
 docker push monikapaza/nodeapi:monica.apaza
 
+-- Test the api with:
+http://localhost:3000/api/host
+
 ```
